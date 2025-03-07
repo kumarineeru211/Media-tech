@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa"; // Import icons
 import "./FeatureSection.css"; 
  import Visual1 from "../assets/Visual1.png"
- import Visual2 from "../assets/visual2.png";
- import Visual3 from "../assets/visual3.png";
- import Visual4 from "../assets/visual4.png";
+ import Visual2 from "../assets/Visual2.png";
+ import Visual3 from "../assets/Visual3.png";
+ import Visual4 from "../assets/Visual4.png";
 import TestimonialCarousel from "./TestimonialCarousel";
 
 const features = [
