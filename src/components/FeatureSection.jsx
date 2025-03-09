@@ -47,65 +47,108 @@ const FeatureSection = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  // Your component JSX structure needs to change for mobile view
+const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+
   return (
     <>
-    <div className="feature-container">
-      {/* Left - Accordion List */}
-      <div className="feature-list">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className={`feature-item ${activeIndex === index ? "active" : ""}`}
-            onClick={() => toggleFeature(index)}
-            style={{ backgroundColor: activeIndex === index ? feature.bgColor : "#ffffff"  , position: "relative",}}
-          >
-            {activeIndex === index && (
-              <div
-                style={{
-                  height: "2px",
-                  width: "300px",
-                  backgroundColor: feature.bgColorR,
-                  position: "absolute",
-                  bottom: "0",
-                  left: "17px",
-                }}
-              ></div>
-            )}
-            <div className="feature-header">
-              <h3>{feature.title}</h3>
-              {activeIndex === index ? <FaMinus /> : <FaPlus />}
+     <div className="feature-container">
+    {!isMobile ? (
+      // Desktop layout - your original code
+      <>
+        {/* Left - Accordion List */}
+        <div className="feature-list">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={`feature-item ${activeIndex === index ? "active" : ""}`}
+              onClick={() => toggleFeature(index)}
+              style={{ backgroundColor: activeIndex === index ? feature.bgColor : "#ffffff", position: "relative" }}
+            >
+              {activeIndex === index && (
+                <div
+                  style={{
+                    height: "2px",
+                    width: "300px",
+                    backgroundColor: feature.bgColorR,
+                    position: "absolute",
+                    bottom: "0",
+                    left: "17px",
+                  }}
+                ></div>
+              )}
+              <div className="feature-header">
+                <h3>{feature.title}</h3>
+                {activeIndex === index ? <FaMinus /> : <FaPlus />}
+              </div>
+              {activeIndex === index && (
+                <div
+                  style={{
+                    width: "100px",
+                    borderBottom: `3px solid ${feature.bgColorR}`,
+                  }}
+                ></div>
+              )}
+              {activeIndex === index && <p>{feature.description}</p>}
             </div>
-            {activeIndex === index && (
+          ))}
+        </div>
+
+        {/* Right - Dynamic Image & Background */}
+        <div
+          className="feature-preview"
+          style={{
+            backgroundColor:
+              activeIndex !== null
+                ? features[activeIndex].bgColorR
+                : features[0].bgColorR,
+          }}
+        >
+          {activeIndex !== null && (
+            <img src={features[activeIndex].image} alt="Feature Preview" />
+          )}
+        </div>
+      </>
+    ) : (
+      // Mobile layout - alternating image and text
+      <div className="mobile-feature-container">
+        {features.map((feature, index) => (
+          <React.Fragment key={index}>
+            {/* Feature Image */}
+            <div 
+              className="mobile-feature-preview"
+              style={{ backgroundColor: feature.bgColorR }}
+            >
+              <img src={feature.image} alt={feature.title} />
+            </div>
+            
+            {/* Feature Text */}
+            <div 
+              className="mobile-feature-item"
+              style={{ backgroundColor: "#ffffff", position: "relative" }}
+            >
+              <div className="feature-header">
+                <h3>{feature.title}</h3>
+              </div>
               <div
                 style={{
                   width: "100px",
                   borderBottom: `3px solid ${feature.bgColorR}`,
+                  marginTop: "8px",
+                  marginBottom: "12px"
                 }}
               ></div>
-            )}
-            {activeIndex === index && <p>{feature.description}</p>}
-          </div>
+              <p>{feature.description}</p>
+            </div>
+          </React.Fragment>
         ))}
       </div>
-
-      {/* Right - Dynamic Image & Background */}
-      <div
-        className="feature-preview"
-        style={{
-          backgroundColor:
-            activeIndex !== null
-              ? features[activeIndex].bgColorR
-              : features.bgColorR,
-        }}
-      >
-        {activeIndex !== null && (
-          <img src={features[activeIndex].image} alt="Feature Preview" />
-        )}
-      </div>
+    )}
+  </div>
 
     
       
-    </div>
+   
     <TestimonialCarousel/>
     
     </>
