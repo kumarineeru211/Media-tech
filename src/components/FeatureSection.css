@@ -62,6 +62,10 @@
   .feature-container {
     width: 100%;
   }
+
+  .faqwidth {
+    width: 88%;
+  }
   
   .mobile-feature-container {
     width: 100%;

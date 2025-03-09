@@ -4,10 +4,10 @@ import './images.css';
 const SwiperSlider = () => {
   
   const images = [
-    { src: "/slider1.png", alt: "Fashion Website", title: "Fashion Website", description: "An elegant fashion website", link: "#" },
-    { src: "/slider2.png", alt: "AI Telehealth Website", title: "AI Telehealth", description: "AI-powered telehealth solutions", link: "#" },
-    { src: "/slider3.png", alt: "Safety Culture Website", title: "Safety Culture", description: "Ensuring workplace safety", link: "#" },
-    { src: "/slider4.png", alt: "Tech Startup Website", title: "Tech Startup", description: "Innovative tech solutions", link: "#" }
+    { src: "/slider1.png", alt: "Fashion Website", title: "Agora", description: "An elegant fashion website", link: " https://ondemand.hubilo.io/agora" },
+    { src: "/slider2.png", alt: "AI Telehealth Website", title: "Ignition", description: "AI-powered telehealth solutions", link: " https://ondemand.hubilo.io/ignition" },
+    { src: "/slider3.png", alt: "Safety Culture Website", title: "Azuga", description: "Ensuring workplace safety", link: "https://ondemand.hubilo.io/azuga" },
+    { src: "/slider4.png", alt: "Tech Startup Website", title: "GenNext", description: "Innovative tech solutions", link: "https://uniflix.tv/" }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
