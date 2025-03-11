@@ -41,7 +41,7 @@ const features = [
 ];
 
 const FeatureSection = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(1  );
 
   const toggleFeature = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -54,7 +54,7 @@ const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
     <>
      <div className="feature-container">
     {!isMobile ? (
-      // Desktop layout - your original code
+      // Desktop layout 
       <>
         {/* Left - Accordion List */}
         <div className="feature-list">

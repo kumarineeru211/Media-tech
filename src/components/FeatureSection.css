@@ -1,4 +1,4 @@
-/* Your existing CSS */
+
 .feature-container {
   display: flex;
   gap: 20px;
@@ -75,7 +75,7 @@
   }
   
   .mobile-feature-preview {
-    width: 100%;
+    width: 84%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@
     border-radius: 15px;
     margin-bottom: 25px;
     border: 1px solid #ddd;
-    width: 100%;
+    max-width: 82%;
   }
   
   .mobile-feature-item .feature-header {

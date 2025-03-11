@@ -102,6 +102,7 @@
     font-size: 42px;
     line-height: 10px;
     letter-spacing: -0.03em;
+
   }
   
   .sub-text {
@@ -249,8 +250,8 @@
    }
   
     .main-heading {
-      font-size: 32px;
-      line-height: 18px;
+      font-size: 29px;
+    line-height: 35px;
     }
   
     .sub-text {
@@ -271,6 +272,9 @@
     .stats-card p {
       font-size: 18px;
       line-height: 25px;
+    }
+    .hero-title{
+      font-size: 20px;
     }
   }
   
@@ -403,6 +407,8 @@
   .media-banner {
     flex-direction: column;
     text-align: center;
+    max-width: 71%;
+    margin-left: 3px;
   }
 
   .banner-content {
@@ -412,7 +418,7 @@
 
   .banner-image img {
     width: 100%;
-    margin-top: -144px;
+    margin-top: -115px;
   }
 }
 
@@ -535,7 +541,8 @@ input {
   }
 
   .form-container {
-    width: 100%;
+    width: 90%;
     max-width: 400px;
+    margin-left: -30px;
   }
 }
