@@ -1,4 +1,4 @@
-/* General Navbar Styling */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -12,21 +12,17 @@
   }
 
   .nav-link {
-    display: inline-flex; /* Ensure inline layout */
-    align-items: center; /* Align text and icon */
+    display: inline-flex; 
+    align-items: center; 
     text-decoration: none;
     color: black;
     font-size: 26px;
   }
  
-  /* .dropdown-icon {
-    font-size: 14px;
-    vertical-align: baseline; 
-    display: inline-flex; 
-  } */
+ 
   
   
-  /* Logo */
+
   .logo {
     font-size: 24px;
     font-weight: bold;

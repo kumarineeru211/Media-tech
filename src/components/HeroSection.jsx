@@ -26,7 +26,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000); // Change word every 2 seconds
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, [])
@@ -108,7 +108,7 @@ const HeroSection = () => {
       </div>
       <FeatureSection />
 
-      <div className="video-management-section" style={{ marginTop: "70px" }}>
+      <div className="video-management-section">
         <h4 className="highlight-text1">Elevate your video strategy</h4>
         <h2 className="main-heading">Seamless Video Management</h2>
         <p className="sub-text">
@@ -126,7 +126,7 @@ const HeroSection = () => {
       </div>
       </div>
 
-      <div className="video-management-section" style={{ marginTop: "70px" }}>
+      <div className="video-management-section" >
         <h4 className="highlight-text1">Media+ in action:</h4>
         <h2 className="main-heading">Customer Spotlight</h2>
         <p className="sub-text">
@@ -136,7 +136,7 @@ const HeroSection = () => {
 
       </div>
 
-      <div  className="video-management-section" style={{ marginTop: "40px" }}>
+      <div  className="video-management-section" >
         <h4 className="highlight-text1">Explore</h4>
         <h2 className="main-heading">
         Media+ Features</h2>

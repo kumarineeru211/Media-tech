@@ -1,7 +1,7 @@
 
 .footer {
-    background-color: white; /* White background */
-    color: black; /* Text color */
+    background-color: white;
+    color: black;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
   }
@@ -26,8 +26,7 @@
   
   .footer-sections {
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
+   
   }
   
   .footer-column {
@@ -176,7 +175,7 @@
 
     .footer-sections {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* Creates a 2-column grid */
+      grid-template-columns: 1fr 1fr; 
       
       margin-left: 90px;
     }

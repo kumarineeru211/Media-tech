@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa"; // Import icons
+import { FaPlus, FaMinus } from "react-icons/fa"; 
 import "./FeatureSection.css"; 
  import Visual1 from "../assets/Visual1.png"
  import Visual2 from "../assets/Visual2.png";
@@ -47,7 +47,7 @@ const FeatureSection = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  // Your component JSX structure needs to change for mobile view
+  
 const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
   return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md"; // Import arrow icon
-import "./Navbar.css"; // Import CSS
-import logo from "../assets/logo.jpg"; // Import logo image
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import "./Navbar.css"; 
+import logo from "../assets/logo.jpg"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
